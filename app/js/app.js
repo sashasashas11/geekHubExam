@@ -1,5 +1,6 @@
 var geekHubApp = angular.module('geekHubApp', [
     'ngRoute',
+    'checklist-model',
     'geekHubControllers',
     'geekHubServices'
 ]);

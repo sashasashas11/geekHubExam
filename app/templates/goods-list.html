@@ -4,49 +4,34 @@
 
 			Search: <input ng-model="query">
 
-			<div class="brand-block-wrapper">
-				<span>Brand:</span>
-				<div>
-					<input ng-model="brand.GoPro" type="checkbox" id="go-pro">
-					<label class="brand-label" for="go-pro">GoPro</label>
-				</div>
-				<div>
-					<input ng-model="brand.DOD" type="checkbox" id="dod">
-					<label class="brand-label" for="dod">DOD</label>
-				</div>
-				<div>
-					<input ng-model="brand.Aspiring" type="checkbox" id="aspiring">
-					<label class="brand-label" for="aspiring">Aspiring</label>
-				</div>
-				<div>
-					<input ng-model="brand.Globex" type="checkbox" id="globex">
-					<label class="brand-label" for="globex">Globex</label>
-				</div>
-				<div>
-					<input ng-model="brand.Falcon" type="checkbox" id="falcon">
-					<label class="brand-label" for="falcon">Falcon</label>
-				</div>
+			<div class="brand-block col-md-10">
+				<span class="row">Brand:</span>
+				<label ng-repeat="brand in brands">
+					<input type="checkbox" checklist-model="filter.brand" checklist-value="brand"> {{brand}}
+				</label>
 			</div>
-			<div class="price">
+			<div class="price col-md-10">
 				<span>Price</span>
 				<input ng-model="price.from" type="text" placeholder="От">
 				<input ng-model="price.to" type="text" placeholder="До">
 			</div>
 			<button class="btn btn-success">Поиск</button>
+
+			{{filter.brand}}
 		</div>
 
-	</div>
+		<div class="col-md-10">
 
-	<div class="col-md-10">
-		<ul class="goods">
-			<li ng-repeat="goods in data">
-				<a href="#">{{goods.title}}</a>
-				<span>{{goods.price}}</span>
-				<span>{{goods.brand}}</span>
-				<span>{{goods.resolution}}</span>
-			</li>
-		</ul>
+			<ul class="goods">
+				<li ng-repeat="goods in data">
+					<a href="#">{{goods.title}}</a>
+					<span>{{goods.price}}</span>
+					<span>{{goods.brand}}</span>
+					<span>{{goods.resolution}}</span>
+				</li>
+			</ul>
 
+		</div>
 	</div>
 </div>
 </div>
