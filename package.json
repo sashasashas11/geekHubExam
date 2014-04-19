@@ -1,0 +1,24 @@
+{
+  "name": "geekHub-exam",
+  "version": "0.0.1",
+  "description": "geekHubExam ===========",
+  "main": "app.js",
+  "dependencies": {
+    "express": "~4.0.0",
+    "mongoose": "~3.8.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sashasashas11/geekHubExam.git"
+  },
+  "author": "Sasha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sashasashas11/geekHubExam/issues"
+  },
+  "homepage": "https://github.com/sashasashas11/geekHubExam"
+}
