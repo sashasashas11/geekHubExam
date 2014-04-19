@@ -3,8 +3,6 @@ var Schema = mongoose.Schema;
 
 mongoose.connect('mongodb://localhost/test');
 
-
-
 var express = require('express');
 var app = express();
 
@@ -18,6 +16,7 @@ app.post('/goods', function(request, response){
         response.send(goods);
     })
 });
+
 app.get('/goods', function(request, response){
     var Goods = require('./model/goods');
     Goods.find().exec(function(err, goods) {
@@ -31,8 +30,6 @@ app.delete('/goods/:id', function(request, response) {
         response.send({error:err});
     })
 });
-
-
 
 app.listen(3031);
 console.log("Server started on port 3031");
