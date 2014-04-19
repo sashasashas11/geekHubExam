@@ -8,4 +8,6 @@ geekHubControllers.controller('GoodsListCtrl', ['$scope', 'Goods',
 
         $scope.filter = { brand: [] }
 
+//        Goods.save({"title":"GoPro HERO3+ Black Edition","price":6000,"brand":"GoPro","resolution":12})
+
     }]);

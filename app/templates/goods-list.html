@@ -1,9 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-2">
-
-			Search: <input ng-model="query">
-
+			Search: <input ng-model="filter.title">
 			<div class="brand-block col-md-10">
 				<span class="row">Brand:</span>
 				<label ng-repeat="brand in brands">
@@ -12,18 +10,15 @@
 			</div>
 			<div class="price col-md-10">
 				<span>Price</span>
-				<input ng-model="price.from" type="text" placeholder="От">
-				<input ng-model="price.to" type="text" placeholder="До">
+				<input ng-model="filter.priceFrom" type="text" placeholder="От">
+				<input ng-model="filter.priceTo" type="text" placeholder="До">
 			</div>
 			<button class="btn btn-success">Поиск</button>
-
-			{{filter.brand}}
 		</div>
 
 		<div class="col-md-10">
-
 			<ul class="goods">
-				<li ng-repeat="goods in data">
+				<li ng-repeat="goods in data | filter:filter">
 					<a href="#">{{goods.title}}</a>
 					<span>{{goods.price}}</span>
 					<span>{{goods.brand}}</span>

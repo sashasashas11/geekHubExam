@@ -2,7 +2,8 @@ var geekHubApp = angular.module('geekHubApp', [
     'ngRoute',
     'checklist-model',
     'geekHubControllers',
-    'geekHubServices'
+    'geekHubServices',
+    'geekHubFilter'
 ]);
 
 geekHubApp.config(['$routeProvider',
