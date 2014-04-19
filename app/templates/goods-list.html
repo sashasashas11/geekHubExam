@@ -18,7 +18,7 @@
 
 		<div class="col-md-10">
 			<ul class="goods">
-				<li ng-repeat="goods in data | filter:filter">
+				<li ng-repeat="goods in data | goodsFilter:filter">
 					<a href="#">{{goods.title}}</a>
 					<span>{{goods.price}}</span>
 					<span>{{goods.brand}}</span>
